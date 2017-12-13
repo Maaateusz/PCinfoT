@@ -1,0 +1,8 @@
+c:\users\mateusz\documents\visual studio 2015\Projects\pcinfoT\pcinfoT\bin\Debug\pcinfoT.exe.config
+c:\users\mateusz\documents\visual studio 2015\Projects\pcinfoT\pcinfoT\bin\Debug\pcinfoT.exe
+c:\users\mateusz\documents\visual studio 2015\Projects\pcinfoT\pcinfoT\bin\Debug\pcinfoT.pdb
+c:\users\mateusz\documents\visual studio 2015\Projects\pcinfoT\pcinfoT\obj\Debug\pcinfoT.Form1.resources
+c:\users\mateusz\documents\visual studio 2015\Projects\pcinfoT\pcinfoT\obj\Debug\pcinfoT.Properties.Resources.resources
+c:\users\mateusz\documents\visual studio 2015\Projects\pcinfoT\pcinfoT\obj\Debug\pcinfoT.csproj.GenerateResource.Cache
+c:\users\mateusz\documents\visual studio 2015\Projects\pcinfoT\pcinfoT\obj\Debug\pcinfoT.exe
+c:\users\mateusz\documents\visual studio 2015\Projects\pcinfoT\pcinfoT\obj\Debug\pcinfoT.pdb
