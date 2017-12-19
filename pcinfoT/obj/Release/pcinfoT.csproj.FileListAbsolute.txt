@@ -6,3 +6,4 @@ C:\Users\Mateusz\Documents\Visual Studio 2015\Projects\pcinfoT\pcinfoT\obj\Relea
 C:\Users\Mateusz\Documents\Visual Studio 2015\Projects\pcinfoT\pcinfoT\obj\Release\pcinfoT.csproj.GenerateResource.Cache
 C:\Users\Mateusz\Documents\Visual Studio 2015\Projects\pcinfoT\pcinfoT\obj\Release\pcinfoT.exe
 C:\Users\Mateusz\Documents\Visual Studio 2015\Projects\pcinfoT\pcinfoT\obj\Release\pcinfoT.pdb
+C:\Users\Mateusz\Documents\Visual Studio 2015\Projects\pcinfoT\pcinfoT\obj\Release\pcinfoT.csprojResolveAssemblyReference.cache

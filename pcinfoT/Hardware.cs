@@ -42,7 +42,7 @@ namespace pcinfoT
             }
             catch
             {
-                return "No information";
+                return null;
             }
         }
     }

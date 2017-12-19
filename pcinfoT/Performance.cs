@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System;
 
 namespace pcinfoT
 {
@@ -8,6 +9,7 @@ namespace pcinfoT
         private string y;
         private string z;
         private double value;
+        private string error;
         PerformanceCounter tmp;
 
         public Performance() { }
@@ -16,7 +18,14 @@ namespace pcinfoT
         {
             this.x = x;
             this.y = y;
-            tmp = new PerformanceCounter(x, y);
+            try
+            {
+                tmp = new PerformanceCounter(x, y);
+            }
+            catch (Exception e)
+            {
+                error = e.ToString();
+            }
         }
 
         public Performance(string x, string y, string z)
@@ -24,7 +33,14 @@ namespace pcinfoT
             this.x = x;
             this.y = y;
             this.z = z;
-            tmp = new PerformanceCounter(x, y, z);
+            try
+            {
+                tmp = new PerformanceCounter(x, y, z);
+            }
+            catch (Exception e)
+            {
+                error = e.ToString();
+            }
         }
 
         public double GetElement()

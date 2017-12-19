@@ -18,6 +18,7 @@ namespace pcinfoT
         Hardware physicalMemory = new Hardware("Win32_PhysicalMemory");
         Hardware sound = new Hardware("Win32_SoundDevice");
         Hardware monitor = new Hardware("Win32_DesktopMonitor");
+        Hardware computerSystem = new Hardware("Win32_ComputerSystem");
         #endregion
 
         #region Performance
@@ -39,9 +40,8 @@ namespace pcinfoT
         Performance ramCache = new Performance("Memory", "Cache Bytes");
         Performance ramCommitLimit = new Performance("Memory", "Commit Limit");
         Performance ramCommited = new Performance("Memory", "Committed Bytes");
-        Performance ramTotal = new Performance("NUMA Node Memory", "Total MBytes", "_Total");
         #endregion
-        
+
         private double processorTimeValue;
         private double diskTimeValue;
         private double diskWriteTimeValue;
@@ -64,8 +64,8 @@ namespace pcinfoT
             /*---CPU-------------------------------------------*/
             label6.Text = processor.GetElement("Name");
             label51.Text = processor.GetElement("Caption");
-            label45.Text = processor.GetElement("L2CacheSize");
-            label58.Text = processor.GetElement("L3CacheSize");
+            label45.Text = processor.GetElement("L2CacheSize") + " KB";
+            label58.Text = processor.GetElement("L3CacheSize") + " KB";
             label48.Text = processor.GetElement("MaxClockSpeed") + " MHz";
             label50.Text = processor.GetElement("NumberOfCores");
             label49.Text = processor.GetElement("NumberOfLogicalProcessors");
@@ -80,7 +80,8 @@ namespace pcinfoT
 
             /*---Motherboard & RAM-------------------------------------------*/
             label13.Text = motherboard.GetElement("Description");
-            label84.Text = motherboard.GetElement("Manufacturer"); 
+            label84.Text = motherboard.GetElement("Manufacturer");
+            label74.Text = (Convert.ToInt64( computerSystem.GetElement("TotalPhysicalMemory") ) / (1024 * 1024)).ToString() + " MB";
             label71.Text = motherboard.GetElement("Version");
             label72.Text = bios.GetElement("Description"); 
             label94.Text = physicalMemory.GetElement("Speed") + " MHz";
@@ -134,7 +135,6 @@ namespace pcinfoT
 
             /*---Motherboard & RAM-------------------------------------------*/
             label73.Text = ram.GetElement().ToString() + " MB";
-            label74.Text = ramTotal.GetElement().ToString() + " MB";
             label75.Text = string.Format("{0:0.00} MB", ramCache.GetElement() / (1024 * 1024));
             label76.Text = string.Format("{0:0} MB", ramCommitLimit.GetElement() / (1024 * 1024));
             label77.Text = string.Format("{0:0} MB", ramCommited.GetElement() / (1024 * 1024));
@@ -157,37 +157,44 @@ namespace pcinfoT
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            SetInterval(250);
+            timer1.Interval = 250;
+            GraphClear();
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            SetInterval(500);
+            timer1.Interval = 500;
+            GraphClear();
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            SetInterval(750);
+            timer1.Interval = 750;
+            GraphClear();
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            SetInterval(1000);
+            timer1.Interval = 1000;
+            GraphClear();
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            SetInterval(2000);
+            timer1.Interval = 2000;
+            GraphClear();
         }
 
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
         {
-            SetInterval(5000);
+            timer1.Interval = 5000;
+            GraphClear();
         }
 
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
-            SetInterval(10000);
+            timer1.Interval = 10000;
+            GraphClear();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -212,12 +219,6 @@ namespace pcinfoT
             chart2.Series["DiskTime"].Points.Clear();
             chart2.Series["WriteTime"].Points.Clear();
             chart2.Series["ReadTime"].Points.Clear();
-        }
-
-        private void SetInterval(int value)
-        {
-            GraphClear();
-            timer1.Interval = value;
         }
 
         private void chart1_DoubleClick(object sender, EventArgs e)

@@ -1751,7 +1751,7 @@
             this.label102.Margin = new System.Windows.Forms.Padding(0);
             this.label102.Name = "label102";
             this.label102.Padding = new System.Windows.Forms.Padding(1);
-            this.label102.Size = new System.Drawing.Size(312, 30);
+            this.label102.Size = new System.Drawing.Size(404, 30);
             this.label102.TabIndex = 8;
             this.label102.Text = "Devices";
             this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1766,7 +1766,7 @@
             this.label100.Margin = new System.Windows.Forms.Padding(0);
             this.label100.Name = "label100";
             this.label100.Padding = new System.Windows.Forms.Padding(1);
-            this.label100.Size = new System.Drawing.Size(312, 30);
+            this.label100.Size = new System.Drawing.Size(404, 30);
             this.label100.TabIndex = 8;
             this.label100.Text = "Devices";
             this.label100.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1795,7 +1795,7 @@
             this.label62.Margin = new System.Windows.Forms.Padding(0);
             this.label62.Name = "label62";
             this.label62.Padding = new System.Windows.Forms.Padding(1);
-            this.label62.Size = new System.Drawing.Size(312, 30);
+            this.label62.Size = new System.Drawing.Size(404, 30);
             this.label62.TabIndex = 8;
             this.label62.Text = "Devices";
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1838,7 +1838,7 @@
             this.label60.Margin = new System.Windows.Forms.Padding(0);
             this.label60.Name = "label60";
             this.label60.Padding = new System.Windows.Forms.Padding(1);
-            this.label60.Size = new System.Drawing.Size(312, 30);
+            this.label60.Size = new System.Drawing.Size(404, 30);
             this.label60.TabIndex = 6;
             this.label60.Text = "Devices";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
